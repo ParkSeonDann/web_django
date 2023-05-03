@@ -5,60 +5,60 @@ Contactanos
 {% block contenido %}
 <main>
     <div class="py-5 text-center">
-      <img class="d-block mx-auto mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-      <h2>Checkout form</h2>
-      <p class="lead">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+      <h2>Contactanos!</h2>
+      <p class="lead">Si tienes alguna duda, consulta o quieres dejarnos un mensaje con reclamo o felicitaciones, no dudes en llenar el formulario.</p>
     </div>
 
-    <div class="row g-5">
+    <div class="row g-5" style="display: inline-flex; place-content: center;">
 
       <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Billing address</h4>
+        <h4 class="mb-3">Formulario de contacto</h4>
         <form class="needs-validation" novalidate="">
           <div class="row g-3">
             <div class="col-sm-6">
-              <label for="firstName" class="form-label">First name</label>
+              <label for="firstName" class="form-label">Nombre</label>
               <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
               <div class="invalid-feedback">
-                Valid first name is required.
+                Se requiere el nombre.
               </div>
             </div>
 
             <div class="col-sm-6">
-              <label for="lastName" class="form-label">Last name</label>
+              <label for="lastName" class="form-label">Apellido</label>
               <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
               <div class="invalid-feedback">
-                Valid last name is required.
+                Se requiere el apellido.
               </div>
             </div>
 
             <div class="col-12">
-              <label for="username" class="form-label">Username</label>
+              <label for="username" class="form-label">Usuario</label>
               <div class="input-group has-validation">
                 <span class="input-group-text">@</span>
                 <input type="text" class="form-control" id="username" placeholder="Username" required="">
               <div class="invalid-feedback">
-                  Your username is required.
+                  Se requiere usuario.
                 </div>
               </div>
             </div>
 
             <div class="col-12">
-              <label for="email" class="form-label">Email <span class="text-body-secondary">(Optional)</span></label>
+              <label for="email" class="form-label">Correo electronico</label>
               <input type="email" class="form-control" id="email" placeholder="you@example.com">
               <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
+                Se requiere correo electronico.
               </div>
             </div>
-
+            
             <div class="col-12">
               <label for="address" class="form-label">Razon de contacto</label>
               <input type="text" class="form-control" id="address" placeholder="uy q mala la wea" required="">
               <div class="invalid-feedback">
-                Please enter your shipping address.
+                Se requiere mensaje.
               </div>
             </div> 
           </div>
+          <br>
           <button class="w-100 btn btn-primary btn-lg" type="submit">Envialo po' atrevete te veo  </button>
         </form>
       </div>

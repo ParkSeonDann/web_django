@@ -14,6 +14,13 @@ def mostrar_albumes(request):
     }
     return render(request, 'albumes.html', context)
 
+def mostrar_precios(request):
+    context = {
+        'titulo':'precios',
+        'lista': albumes,
+    }
+    return render(request, 'precios.html', context)
+
 
 
 

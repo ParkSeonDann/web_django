@@ -8,9 +8,21 @@ def mostrar_contactanos(request):
     return render(request, 'contacto.html')
 
 def mostrar_albumes(request):
+    resultado = albumes
+    palabra = ""
+    if request.method == 'GET':
+        palabra_cliente = request.GET.get('busqueda')
+        if palabra_cliente != None:
+            palabra = palabra_cliente
+            resultado = []
+            for variable in albumes:
+                if palabra_cliente.lower() in variable['nombre'].lower() or palabra_cliente.lower() in variable['fecha'].lower() or palabra_cliente.lower() in variable['autor'].lower() or palabra_cliente.lower() in variable['lugar'].lower() or palabra_cliente.lower() in variable['precio'].lower() or palabra_cliente.lower() in variable['caratula'].lower():
+                    resultado.append(variable)
+            
     context = {
         'titulo':'Albumes de musica',
-        'lista': albumes,
+        'lista': resultado,
+        'palabra': palabra,
     }
     return render(request, 'albumes.html', context)
 

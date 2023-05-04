@@ -19,22 +19,27 @@ Albumes
         </div>
       </div>
     </section>
+    {% if lista %}
     {% for album in lista %}   
-      <div class="col" style="display: inline-flex; align-content: center; margin: 1%;" id="{{ album.id }}">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-body">
-            <img src="{{ album.caratula }}" class="card-img-top" style="width: 300px; height: 300px;">
-            <div class="card-header py-3">
-              <h4 class="my-0 fw-normal" style="justify-content: start;">{{ album.nombre }}</h4>
-            </div>
-            <h3 class="card-title pricing-card-title">{{ album.autor }}</h1>
-            <h5 class="pricing-card-title">{{ album.lugar }}</h1>
-            <h5 class="pricing-card-title">{{ album.fecha }}</h1>
+    <div class="col" style="display: inline-flex; align-content: center; margin: 1%;" id="{{ album.id }}">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-body">
+          <img src="{{ album.caratula }}" class="card-img-top" style="width: 300px; height: 300px;">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal" style="justify-content: start;">{{ album.nombre }}</h4>
           </div>
+          <h3 class="card-title pricing-card-title">{{ album.autor }}</h1>
+          <h5 class="pricing-card-title">{{ album.lugar }}</h1>
+          <h5 class="pricing-card-title">{{ album.fecha }}</h1>
         </div>
       </div>
     </div>
-    {% endfor album in lista %}
+  </div>
+  {% endfor %}
+  {% else %}
+    <h2 class="text-center">No hay datos coincidentes con la/s palabras: {{ palabra }}</h2>
+  {% endif  %}
+    
     
   
   </main>

@@ -17,6 +17,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from .views import *
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('',mostrar_principal, name='pagina_principal'),
@@ -25,3 +27,6 @@ urlpatterns = [
     path('precios/',mostrar_precios, name='pagina_precios'),
     path('admin/', admin.site.urls),
 ]
+
+if settings.DEBUG == True: 
+    urlpatterns += static(settings.STATIC_URL, root_document = settings.STATIC_ROOT)

@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from .albumes import albumes
+from .forms import *
 
 def mostrar_principal(request):
     return render(request, 'index.html')
     
 def mostrar_contactanos(request):
-    return render(request, 'contacto.html')
+    contexto = {
+        'formulario':MiPrimerFormulario()
+    }
+    return render(request, 'contacto.html', contexto)
 
 def mostrar_albumes(request):
     resultado = albumes
@@ -32,6 +36,7 @@ def mostrar_precios(request):
         'lista': albumes,
     }
     return render(request, 'precios.html', context)
+
 
 
 

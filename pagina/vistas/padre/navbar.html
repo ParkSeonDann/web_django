@@ -18,7 +18,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{% url 'pagina_contactanos' %}">Contacto</a>
           </li>
-
+          <li    class = "align-self-center">
+            <input type  = "checkbox" id = "dark-mode" onclick = "document.documentElement.classList.toggle('dark-mode')">
+          </li>
         </ul>
         <form action="{% url 'pagina_albumes' %}" method="GET" class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Ej: ATEEZ" aria-label="Search" name="busqueda">

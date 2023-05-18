@@ -12,7 +12,7 @@ Albumes
             <h4 class="my-0 fw-normal">{{ album.nombre }}</h4>
           </div>
           <div class="card-body">
-            <img src="{{ album.caratula }}" class="card-img-top">
+            <img src="{% static album.caratula %}" class="card-img-top" style="width: 300px; height: 300px;">
             <h1 class="card-title pricing-card-title">{{ album.precio }}</h1>
             <h5 class="card-title pricing-card-title">{{ album.autor }}</h5>
             <ul class="list-unstyled mt-3 mb-4">

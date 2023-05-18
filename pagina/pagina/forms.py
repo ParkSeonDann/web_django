@@ -40,15 +40,31 @@ class MiPrimerFormulario(Form):
         )
     )
 
-    emaail_usuario =  EmailField(
+    email_usuario =  EmailField(
         required= True,
-        min_length=3,
-        max_length=40,
         label="Ingresa tu correo",
-        help_text="Este campo es obligatorio",
+        help_text="*Este campo es obligatorio",
         widget=EmailInput(
             attrs = {
                 'class': 'form-control'
+            }
+        )
+    )
+
+    opciones_genero = [
+        (1,"No definido"),
+        (1,"Femenino"),
+        (1,"Masculino"),
+    ]
+
+    genero_usuario = ChoiceField(
+        required=True,
+        choices=opciones_genero,
+        label="Selecciona tu genero*",
+        help_text="*Campo requerido",
+        widget=RadioSelect(
+            attrs = {
+                'class':'form-check'
             }
         )
     )

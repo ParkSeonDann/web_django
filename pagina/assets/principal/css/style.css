@@ -1,0 +1,7 @@
+html.dark-mode{
+    filter: invert(100%);
+}
+
+html.dark-mode img{
+    filter: invert(100%);
+}

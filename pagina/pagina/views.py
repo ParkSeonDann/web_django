@@ -6,10 +6,23 @@ def mostrar_principal(request):
     return render(request, 'index.html')
     
 def mostrar_contactanos(request):
-    contexto = {
-        'formulario':MiPrimerFormulario()
-    }
-    return render(request, 'contacto.html', contexto)
+    if request.method == "GET":
+        contexto = {
+            'formulario':MiPrimerFormulario()
+        }
+        return render(request, 'contacto.html', contexto)
+    if request.method == "POST":
+        formulario_usuario = MiPrimerFormulario(request.POST)
+        es_valido = formulario_usuario.is_valid()
+        if es_valido:
+            contexto = {
+                "mensaje":"Formulario Valido uwu"
+            }
+            return render(request, 'contacto.html', contexto)
+        contexto = {
+            "formulario":formulario_usuario
+        }
+        return render(request, 'contacto.html', contexto)
 
 def mostrar_albumes(request):
     resultado = albumes

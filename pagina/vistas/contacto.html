@@ -3,7 +3,7 @@
 Contactanos 
 {% endblock titulo %}
 {% block contenido %}
-<main>
+<!-- <main>
     <div class="py-5 text-center">
       <h2>Contactanos!</h2>
       <p class="lead">Si tienes alguna duda, consulta o quieres dejarnos un mensaje con reclamo o felicitaciones, no dudes en llenar el formulario.</p>
@@ -63,8 +63,72 @@ Contactanos
         </form>
       </div>
     </div>
-  </main>
+</main> -->
 <div class="container">
-  {{ formulario }}
+  {% if saludo %}
+    <h1>Gracias :) el formulario es valido uwu</h1>
+    <a class="btn btn-info" href="{% url 'pagina_contactanos' %}"></a>
+  {% else %}
+  <form action="" method="POST">
+    {% csrf_token %}
+    <section class="row">
+      <fieldset class="col-6">
+        <label for="{{ formulario.primer_nombre.id_for_label }}">{{ formulario.primer_nombre.label }}</label>
+        {{ formulario.primer_nombre }}
+        <p class="text-form">
+          {{ formulario.primer_nombre.help_text }}
+        </p>
+        <p class="text-danger">
+          {{ formulario.primer_nombre.errors }}
+        </p>
+      </fieldset>
+      <fieldset class="col-6">
+        <label for="{{ formulario.edad_usuario.id_for_label }}">{{ formulario.edad_usuario.label }}</label>
+        {{ formulario.edad_usuario }}
+        <p class="text-form">
+          {{ formulario.edad_usuario.help_text }}
+        </p>
+        <p class="text-danger">
+          {{ formulario.edad_usuario.errors }}
+        </p>
+      </fieldset>
+      <fieldset class="col-12">
+        <label for="{{ formulario.contrasenia_usuario.id_for_label }}">{{ formulario.contrasenia_usuario.label }}</label>
+        {{ formulario.contrasenia_usuario }}
+        <p class="text-form">
+          {{ formulario.contrasenia_usuario.help_text }}
+        </p>
+        <p class="text-danger">
+          {{ formulario.contrasenia_usuario.errors }}
+        </p>
+      </fieldset>
+      <fieldset class="col-8">
+        <label for="{{ formulario.email_usuario.id_for_label }}">{{ formulario.email_usuario.label }}</label>
+        {{ formulario.email_usuario }}
+        <p class="text-form">
+          {{ formulario.email_usuario.help_text }}
+        </p>
+        <p class="text-danger">
+          {{ formulario.email_usuario.errors }}
+        </p>
+      </fieldset><fieldset class="col-4">
+        <label for="{{ formulario.genero_usuario.id_for_label }}">{{ formulario.genero_usuario.label }}</label>
+        {{ formulario.genero_usuario }}
+        <p class="text-form">
+          {{ formulario.genero_usuario.help_text }}
+        </p>
+        <p class="text-danger">
+          {{ formulario.genero_usuario.errors }}
+        </p>
+      </fieldset>
+      <fieldset class="col-12">
+        <button role="submit" type="submit" class="btn btn-success">
+          Enviar
+        </button>
+      </fieldset>
+    </section>
+  </form>
+  {% endif %}
+
 </div>
 {% endblock contenido %}

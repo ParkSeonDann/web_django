@@ -13,6 +13,11 @@
         {% endblock titulo %}
     </title>
     {% block css %}
+    <style>
+        body {
+          background-color: #f2f2f2; /* Color gris claro */
+      }
+      </style>
     {% endblock css %}
 </head>
 <body>
@@ -24,5 +29,9 @@
     {% endblock js %}
 
     <script src="{% static 'principal/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://kit.fontawesome.com/c068349d90.js" crossorigin="anonymous"></script>
+    {% load sweetify %}
+    {% sweetify %}
 </body>
 </html>

@@ -8,6 +8,7 @@ albumes = [
         'caratula': 'productos/img/talento.jfif',
         'precio':'$20.000',
         'cantidad':'2',
+        'genero':'Regueton',
     },
     {
         'id': 2,
@@ -18,6 +19,7 @@ albumes = [
         'caratula': 'productos/img/alltoaction.jfif',
         'precio':'$30.000',
         'cantidad':'5',
+        'genero':'KPOP',
     },
     {
         'id': 3,
@@ -28,6 +30,7 @@ albumes = [
         'caratula': 'productos/img/atoz.jfif',
         'precio':'$30.000',
         'cantidad':'10',
+        'genero':'KPOP',
     },
     {
         'id': 4,
@@ -38,6 +41,7 @@ albumes = [
         'caratula': 'productos/img/alltozero.jfif',
         'precio':'$35.000',
         'cantidad':'7',
+        'genero':'KPOP',
     },
     {
         'id': 5,
@@ -48,6 +52,7 @@ albumes = [
         'caratula': 'productos/img/onetoall.jpeg',
         'precio':'$27.000',
         'cantidad':'1',
+        'genero':'KPOP',
     },
     {
         'id': 6,
@@ -58,6 +63,7 @@ albumes = [
         'caratula': 'productos/img/epi.jfif',
         'precio':'$50.000',
         'cantidad':'8',
+        'genero':'KPOP',
     },
     {
         'id': 7,
@@ -68,6 +74,7 @@ albumes = [
         'caratula': 'productos/img/familia.jfif',
         'precio':'$20.000',
         'cantidad':'2',
+        'genero':'Regueton',
     },
     {
         'id': 8,
@@ -78,6 +85,7 @@ albumes = [
         'caratula': 'productos/img/cautivo.jfif',
         'precio':'$70.000',
         'cantidad':'4',
+        'genero':'Baladas',
     },
     {
         'id': 9,
@@ -88,6 +96,7 @@ albumes = [
         'caratula': 'productos/img/gue.jfif',
         'precio':'$24.000',
         'cantidad':'9',
+        'genero':'KPOP',
     },
     {
         'id': 10,
@@ -98,7 +107,39 @@ albumes = [
         'caratula': 'productos/img/mapto.jfif',
         'precio':'$30.000',
         'cantidad':'10',
+        'genero':'KPOP',
     },
 
     
+]
+
+precios = [
+    {
+        'id': 1,
+        'artista': 'ATEEZ',
+        'genero': 'KPOP',
+        'caratula': 'productos/img/talento.jfif',
+        'precio':'$30.000',
+    },
+    {
+        'id': 2,
+        'artista': 'Daddy Yankee',
+        'genero': 'Regueton',
+        'caratula': 'productos/img/talento.jfif',
+        'precio':'$30.000',
+    },
+    {
+        'id': 3,
+        'artista': 'ATEEZ',
+        'genero': 'KPOP',
+        'caratula': 'productos/img/talento.jfif',
+        'precio':'$30.000',
+    },
+    {
+        'id': 4,
+        'artista': 'ATEEZ',
+        'genero': 'KPOP',
+        'caratula': 'productos/img/talento.jfif',
+        'precio':'$30.000',
+    },
 ]

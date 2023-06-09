@@ -1,0 +1,55 @@
+{% extends 'padre/base.html' %}
+{% load static %}
+{% block titulo %}
+Iniciar Sesion
+{% endblock titulo %}
+{% block css %}
+{% endblock css %}
+{% block contenido %}
+<div class="container">
+    <div class="row">
+        <section class="col-md-5" style="margin-top: 66px;">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'principal/img/carro1.jpg' %}"" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'principal/img/carro2.jpg' %}"" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'principal/img/carro3.jpg' %}"" class="d-block w-100" alt="...">
+                </div>
+                </div>
+            </div>
+        </section>
+        <section class="col-md-5" style="align-self: center; background-color: rgba(107, 106, 106, 0.096);">
+            <main class="container">
+                <form method="POST"> 
+                    {% csrf_token %}
+                    <h1 class="h3 mb-3 fw-normal text-center">{{ titulo }}</h1>
+                    <div class="form-floating">
+                        {{ formulario.usuario }}
+                        <label for="{{ formulario.usuario.id_for_label }}">{{ formulario.usuario.label}}</label>
+                    </div>
+                    <br>
+                    <div class="form-floating">
+                        {{ formulario.contrasenia_usuario}}
+                        <label for="{{ formulario.contrasenia_usuario.id_for_label }}">
+                            {{ formulario.contrasenia_usuario.label }}
+                        </label>
+                    </div>
+                  
+                    <div class="checkbox mb-3 text-center">
+                        <label>
+                            {{ formulario.recuerdame }} {{ formulario.recuerdame.label}}
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+                  </form>
+                  <br>
+            </main>
+        </section>
+    </div>
+</div>
+{% endblock contenido %}

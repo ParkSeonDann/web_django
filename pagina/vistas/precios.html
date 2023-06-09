@@ -3,26 +3,35 @@
 {% block titulo %}
 Albumes
 {% endblock titulo %}
+{% block css %}
+<style>
+  .rounded {
+    border-radius: 10px;
+}
+</style>
+{% endblock css %}
 {% block contenido %}
-<main>
-    {% for album in lista %}   
-      <div class="col" style="display: inline-flex; align-content: center; margin: 3%;" id="{{ album.id }}">
-        <div class="card mb-4 rounded-3 shadow-sm">
-          <div class="card-header py-3">
-            <h4 class="my-0 fw-normal">{{ album.nombre }}</h4>
-          </div>
-          <div class="card-body">
-            <img src="{% static album.caratula %}" class="card-img-top" style="width: 300px; height: 300px;">
-            <h1 class="card-title pricing-card-title">{{ album.precio }}</h1>
-            <h5 class="card-title pricing-card-title">{{ album.autor }}</h5>
-            <ul class="list-unstyled mt-3 mb-4">
-              <li>Cantidad disponible: {{ album.cantidad }}</li>
-            </ul>
-            <button type="button" class="w-100 btn btn-lg btn-primary">Comprar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor album in lista %} 
-  </main>
+<br><br>
+<section class="container">   
+    <table class="table table-light table-striped-columns rounded" >
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Artista</th>
+          <th scope="col">Genero</th>
+          <th scope="col">Titulo</th>
+          <th scope="col">Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for album in lista %}
+        <tr>
+          <th scope="row">{{ album.autor }}</th>
+          <td>{{ album.autor }}</td>
+          <td>{{ album.nombre }}</td>
+          <td>{{ album.precio }}</td>
+        </tr>
+        {% endfor %} 
+      </tbody>
+    </table>
+</section>
 {% endblock contenido%}

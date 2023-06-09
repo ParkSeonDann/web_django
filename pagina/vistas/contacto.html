@@ -3,67 +3,7 @@
 Contactanos 
 {% endblock titulo %}
 {% block contenido %}
-<!-- <main>
-    <div class="py-5 text-center">
-      <h2>Contactanos!</h2>
-      <p class="lead">Si tienes alguna duda, consulta o quieres dejarnos un mensaje con reclamo o felicitaciones, no dudes en llenar el formulario.</p>
-    </div>
-
-    <div class="row g-5" style="display: inline-flex; place-content: center;">
-
-      <div class="col-md-7 col-lg-8">
-        <h4 class="mb-3">Formulario de contacto</h4>
-        <form class="needs-validation" novalidate="">
-          <div class="row g-3">
-            <div class="col-sm-6">
-              <label for="firstName" class="form-label">Nombre</label>
-              <input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Se requiere el nombre.
-              </div>
-            </div>
-
-            <div class="col-sm-6">
-              <label for="lastName" class="form-label">Apellido</label>
-              <input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-              <div class="invalid-feedback">
-                Se requiere el apellido.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="username" class="form-label">Usuario</label>
-              <div class="input-group has-validation">
-                <span class="input-group-text">@</span>
-                <input type="text" class="form-control" id="username" placeholder="Username" required="">
-              <div class="invalid-feedback">
-                  Se requiere usuario.
-                </div>
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="email" class="form-label">Correo electronico</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com">
-              <div class="invalid-feedback">
-                Se requiere correo electronico.
-              </div>
-            </div>
-            
-            <div class="col-12">
-              <label for="address" class="form-label">Razon de contacto</label>
-              <input type="text" class="form-control" id="address" placeholder="uy q mala la wea" required="">
-              <div class="invalid-feedback">
-                Se requiere mensaje.
-              </div>
-            </div> 
-          </div>
-          <br>
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Envialo po' atrevete te veo  </button>
-        </form>
-      </div>
-    </div>
-</main> -->
+<br>
 <div class="container">
   {% if saludo %}
     <h1>Gracias :) el formulario es valido uwu</h1>
@@ -72,7 +12,7 @@ Contactanos
   <form action="" method="POST">
     {% csrf_token %}
     <section class="row">
-      <fieldset class="col-6">
+      <fieldset class="col-md-4">
         <label for="{{ formulario.primer_nombre.id_for_label }}">{{ formulario.primer_nombre.label }}</label>
         {{ formulario.primer_nombre }}
         <p class="text-form">
@@ -82,7 +22,7 @@ Contactanos
           {{ formulario.primer_nombre.errors }}
         </p>
       </fieldset>
-      <fieldset class="col-6">
+      <fieldset class="col-4">
         <label for="{{ formulario.edad_usuario.id_for_label }}">{{ formulario.edad_usuario.label }}</label>
         {{ formulario.edad_usuario }}
         <p class="text-form">
@@ -92,7 +32,7 @@ Contactanos
           {{ formulario.edad_usuario.errors }}
         </p>
       </fieldset>
-      <fieldset class="col-12">
+      <fieldset class="col-8">
         <label for="{{ formulario.contrasenia_usuario.id_for_label }}">{{ formulario.contrasenia_usuario.label }}</label>
         {{ formulario.contrasenia_usuario }}
         <p class="text-form">
@@ -102,7 +42,7 @@ Contactanos
           {{ formulario.contrasenia_usuario.errors }}
         </p>
       </fieldset>
-      <fieldset class="col-8">
+      <fieldset class="col-6">
         <label for="{{ formulario.email_usuario.id_for_label }}">{{ formulario.email_usuario.label }}</label>
         {{ formulario.email_usuario }}
         <p class="text-form">
@@ -121,7 +61,7 @@ Contactanos
           {{ formulario.genero_usuario.errors }}
         </p>
       </fieldset>
-      <fieldset class="col-12">
+      <fieldset class="col-10">
         <button role="submit" type="submit" class="btn btn-success">
           Enviar
         </button>
